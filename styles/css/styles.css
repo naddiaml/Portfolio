@@ -18,6 +18,10 @@ i {
   overflow: hidden;
 }
 
+nav ul li a.current {
+  font-weight: bold;
+}
+
 span.m {
   font-weight: 500;
 }
@@ -53,6 +57,11 @@ p {
 @media screen and (max-width: 580px) {
   .deco:first-of-type {
     top: -5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .deco:first-of-type {
+    left: -15rem;
   }
 }
 .deco:nth-of-type(2) {
@@ -199,6 +208,7 @@ p {
   font-weight: 500;
   color: #000000;
   text-decoration: none;
+  padding-right: 0.1rem;
 }
 .header__container header .header__items-container div:last-of-type nav ul li a.current {
   font-weight: bold;
@@ -395,7 +405,7 @@ p {
   }
 }
 
-.about {
+#about {
   width: 80%;
   background-color: #E2E2E2;
   border: 1px solid #E2E2E2;
@@ -406,118 +416,125 @@ p {
   align-items: center;
   padding: 5.5rem 0;
 }
-.about .about__items-container {
+#about .about__items-container {
   width: 80%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.about .about__items-container img {
+#about .about__items-container img {
   width: 20rem;
 }
 @media screen and (max-width: 1150px) {
-  .about .about__items-container img {
+  #about .about__items-container img {
     display: none;
   }
 }
-.about .about__items-container .about__text-container {
+#about .about__items-container .about__text-container {
   margin-left: 1rem;
   width: 55%;
 }
-.about .about__items-container .about__text-container p {
+#about .about__items-container .about__text-container p {
   margin-bottom: 1rem;
 }
-.about .about__items-container .about__text-container p:first-of-type {
+#about .about__items-container .about__text-container p:first-of-type {
   margin-top: 1rem;
 }
 @media screen and (max-width: 1150px) {
-  .about .about__items-container .about__text-container {
+  #about .about__items-container .about__text-container {
     width: 100%;
     text-align: center;
   }
 }
 @media screen and (max-width: 580px) {
-  .about .about__items-container {
+  #about .about__items-container {
     width: 90%;
   }
 }
 @media screen and (max-width: 1150px) {
-  .about {
+  #about {
     margin: 5rem auto;
   }
 }
 @media screen and (max-width: 580px) {
-  .about {
+  #about {
     width: 90%;
   }
 }
 
-.portfolio {
+#portfolio {
   margin: 5rem auto;
 }
-.portfolio .portfolio__text-container {
+#portfolio .portfolio__text-container {
   width: 38%;
   margin: auto;
   text-align: center;
   margin-bottom: 1rem;
 }
-.portfolio .portfolio__text-container p {
+#portfolio .portfolio__text-container p {
   margin-top: 0.5rem;
 }
 @media screen and (max-width: 1150px) {
-  .portfolio .portfolio__text-container {
+  #portfolio .portfolio__text-container {
     width: 60%;
   }
 }
 @media screen and (max-width: 580px) {
-  .portfolio .portfolio__text-container {
+  #portfolio .portfolio__text-container {
     width: 80%;
   }
-  .portfolio .portfolio__text-container p {
+  #portfolio .portfolio__text-container p {
     width: 100%;
   }
 }
-.portfolio .portfolio__items-container {
+#portfolio .portfolio__items-container {
   width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.portfolio .portfolio__items-container .project {
+#portfolio .portfolio__items-container .project {
   display: flex;
   align-items: flex-start;
   margin: 5rem auto 0;
   justify-content: center;
 }
-.portfolio .portfolio__items-container .project:first-of-type {
+#portfolio .portfolio__items-container .project:first-of-type {
   margin-top: 2.5rem;
 }
-.portfolio .portfolio__items-container .project a {
+#portfolio .portfolio__items-container .project a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.portfolio .portfolio__items-container .project a .project__image {
+#portfolio .portfolio__items-container .project a .project__image {
   border-radius: 10px;
   width: fit-content;
   overflow: hidden;
 }
-.portfolio .portfolio__items-container .project a .project__image img {
+#portfolio .portfolio__items-container .project a .project__image img {
   width: 25.5rem;
   height: 11.5rem;
   border-radius: 10px;
   object-fit: cover;
 }
-.portfolio .portfolio__items-container .project a .project__image .project__image-layer {
+@media screen and (max-width: 400px) {
+  #portfolio .portfolio__items-container .project a .project__image img {
+    width: 80vw;
+    height: 18vh;
+    margin: auto;
+  }
+}
+#portfolio .portfolio__items-container .project a .project__image .project__image-layer {
   display: none;
 }
-.portfolio .portfolio__items-container .project a:hover .project__image img {
+#portfolio .portfolio__items-container .project a:hover .project__image img {
   filter: blur(10px);
   transition: 200ms ease-in-out;
 }
-.portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer {
+#portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -531,7 +548,13 @@ p {
   transition: 200ms ease-in-out;
   cursor: pointer;
 }
-.portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer span {
+@media screen and (max-width: 400px) {
+  #portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer {
+    width: 80vw;
+    height: 18.4vh;
+  }
+}
+#portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer span {
   display: flex;
   align-items: center;
   opacity: 1;
@@ -540,65 +563,70 @@ p {
   color: #ffffff;
   margin: auto;
 }
-.portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer span i {
+#portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer span i {
   margin-left: 1rem;
 }
-.portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer:hover span {
+#portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer:hover span {
   opacity: 1;
   font-weight: bold;
   transition: 100ms;
 }
-.portfolio .portfolio__items-container .project .project-description {
+#portfolio .portfolio__items-container .project .project-description {
   display: flex;
   flex-direction: column;
   align-items: first baseline;
   width: 35%;
   margin-left: 2rem;
 }
-.portfolio .portfolio__items-container .project .project-description span.project {
+#portfolio .portfolio__items-container .project .project-description span.project {
   font-size: 1.1rem;
   margin: 0;
   margin-bottom: 0.5rem;
 }
-.portfolio .portfolio__items-container .project .project-description span.project a {
+#portfolio .portfolio__items-container .project .project-description span.project a {
   color: #000000;
 }
-.portfolio .portfolio__items-container .project .project-description span.type-of-project {
+#portfolio .portfolio__items-container .project .project-description span.type-of-project {
   font-weight: 300;
   margin-bottom: 0.5rem;
   opacity: 0.8;
 }
-.portfolio .portfolio__items-container .project .project-description p {
+#portfolio .portfolio__items-container .project .project-description p {
   font-size: 1rem;
 }
-.portfolio .portfolio__items-container .project .project-description span:last-of-type {
+#portfolio .portfolio__items-container .project .project-description span:last-of-type {
   margin-top: 0.5rem;
 }
-.portfolio .portfolio__items-container .project .project-description span:last-of-type a {
+#portfolio .portfolio__items-container .project .project-description span:last-of-type a {
   color: black;
   font-weight: bold;
   display: flex;
   align-items: center;
 }
-.portfolio .portfolio__items-container .project .project-description span:last-of-type a i {
+#portfolio .portfolio__items-container .project .project-description span:last-of-type a i {
   margin-left: 1rem;
 }
 @media screen and (max-width: 950px) {
-  .portfolio .portfolio__items-container .project {
+  #portfolio .portfolio__items-container .project {
     flex-direction: column;
     align-items: center;
   }
-  .portfolio .portfolio__items-container .project:first-of-type {
+  #portfolio .portfolio__items-container .project:first-of-type {
     margin-top: 3rem;
   }
-  .portfolio .portfolio__items-container .project .project-description {
+  #portfolio .portfolio__items-container .project .project-description {
     width: 80%;
     margin-left: 0.5rem;
     margin-top: 1rem;
   }
 }
+@media screen and (max-width: 950px) and (max-width: 400px) {
+  #portfolio .portfolio__items-container .project .project-description {
+    margin-left: 0;
+  }
+}
 @media screen and (max-width: 950px) {
-  .portfolio .portfolio__items-container {
+  #portfolio .portfolio__items-container {
     width: 90%;
   }
 }
@@ -650,6 +678,7 @@ p {
 }
 #contact .form__container form .fieldset__container fieldset .field .input i {
   color: rgb(146, 146, 146);
+  padding-right: 0.1rem;
 }
 #contact .form__container form .fieldset__container fieldset .field .input input {
   width: 100%;

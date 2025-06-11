@@ -18,6 +18,10 @@ i {
     overflow: hidden;
 }
 
+nav ul li a.current {
+    font-weight: bold;
+}
+
 span {
     &.m {
         font-weight: 500;
@@ -56,6 +60,10 @@ p {
         @include smBreakpoint {
             top: -5rem;
         }
+
+        @include uxsBreakpoint {
+            left: -15rem;
+        }
     }
 
     &:nth-of-type(2) {
@@ -86,7 +94,8 @@ p {
     color: $sgray;
     border-radius: 10px;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
         background-color: #C5DDED;
         color: $sgray;
         font-weight: bold;

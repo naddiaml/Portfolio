@@ -16,9 +16,7 @@
         width: 80%;
         margin: auto;
 
-
         form {
-
             .fieldset__container {
                 display: flex;
                 flex-direction: row;
@@ -49,6 +47,7 @@
 
                             i {
                                 color: rgb(146, 146, 146);
+                                padding-right: .1rem;
                             }
 
                             input {

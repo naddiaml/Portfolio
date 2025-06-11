@@ -48,10 +48,10 @@
                 <div>
                     <nav id="nav">
                         <ul>
-                            <li><a href="index.html#hero" class="current">Inicio</a></li>
-                            <li><a href="index.html#info">Sobre mí</a></li>
-                            <li><a href="index.html#portfolio">Portfolio</a></li>
-                            <li><a href="index.html#contact">Contáctame</a></li>
+                            <li><a href="#hero" class="current">Inicio</a></li>
+                            <li><a href="#about">Sobre mí</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contáctame</a></li>
                         </ul>
                     </nav>
                     <button class="nav__downloadCV">
@@ -62,9 +62,10 @@
             </div>
         </header>
     </div>
+
     <img class="deco l" src="assets/deco1.svg" alt="">
     <img class="deco r" src="assets/deco.svg" alt="">
-    <section class="hero">
+    <section id="hero">
         <div class="hero__items-container">
             <div class="hero__left-container">
                 <div class="hero__text-container">
@@ -78,8 +79,8 @@
                     <span><i class="fa-solid fa-location-dot"></i>Buenos Aires, Argentina</span>
                 </div>
                 <div class="hero__CTA-container">
-                    <button>
-                        <a href="#">Ver mi trabajo</a>
+                    <button class="scroll-btn" data-target="portfolio">
+                        <a href="#portfolio">Ver mi trabajo</a>
                     </button>
                     <button>
                         <a href="https://www.linkedin.com/in/nadia-mlinarevic/" target="_blank">Linkedin</a>
@@ -94,7 +95,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="about__items-container">
             <!-- Illustration from manypixels.co - "Thinking" (39)-->
             <img src="assets/About_img.png" alt="Ilustración en la sección 'Sobre mí'">
@@ -120,7 +121,8 @@
     </section>
 
     <img src="assets/deco.svg" class="deco r" alt="">
-    <section class="portfolio">
+
+    <section id="portfolio">
         <div class="portfolio__text-container">
             <span class="title">PORTFOLIO</span>
             <p>Cada proyecto busca resolver una necesidad concreta con claridad y criterio. Mis diseños están pensados
@@ -226,7 +228,7 @@
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section id="contact">
         <div class="section__text-container">
             <span class="title">CONTÁCTAME</span>
         </div>
@@ -302,6 +304,85 @@
 
         navLinks.forEach(link => {
             link.addEventListener('click', uncheckBurger);
+        });
+
+        // Smooth scroll y marcado dinámico del menú
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            // Detectar la sección visible y actualizar la clase
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('current');
+                            if (link.getAttribute('href') === '#' + entry.target.id) {
+                                link.classList.add('current');
+                            }
+                        });
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.4
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        function smoothScroll(targetId, duration = 600) {
+            const target = document.getElementById(targetId);
+            if (!target) return;
+
+            const offset = 120;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        // Enlaces del menú
+        document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                smoothScroll(targetId);
+
+                // Cierra menú hamburguesa si está activo
+                const burgerInput = document.getElementById('burger');
+                const nav = document.querySelector('nav');
+                burgerInput.checked = false;
+                nav.classList.remove('active');
+            });
+        });
+
+        // Botones con data-target
+        document.querySelectorAll('.scroll-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.dataset.target;
+                if (targetId) smoothScroll(targetId);
+            });
         });
 
         // Formulario de contacto
