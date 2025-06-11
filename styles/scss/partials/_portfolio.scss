@@ -1,0 +1,176 @@
+.portfolio {
+    margin: 5rem auto;
+
+    .portfolio__text-container {
+        width: 38%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        p {
+            margin-top: .5rem;
+        }
+
+        @include largeBreakpoint {
+            width: 60%;
+        }
+
+        @include smBreakpoint {
+            width: 80%;
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+
+    .portfolio__items-container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .project {
+            display: flex;
+            align-items: flex-start;
+            margin: 5rem auto 0;
+            justify-content: center;
+
+            &:first-of-type {
+                margin-top: 2.5rem;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .project__image {
+                    border-radius: 10px;
+                    width: fit-content;
+                    overflow: hidden;
+
+                    img {
+                        width: 25.5rem;
+                        height: 11.5rem;
+                        border-radius: 10px;
+                        object-fit: cover;
+                    }
+
+                    .project__image-layer {
+                        display: none;
+                    }
+
+                }
+
+                &:hover {
+                    .project__image {
+                        img {
+                            filter: blur(10px);
+                            transition: 200ms ease-in-out;
+                        }
+
+                        .project__image-layer {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            width: 25.5rem;
+                            height: 11.7rem;
+                            background-color: $sgray;
+                            opacity: 0.5;
+                            border-radius: 10px;
+                            z-index: 1;
+                            transition: 200ms ease-in-out;
+                            cursor: pointer;
+
+                            span {
+                                display: flex;
+                                align-items: center;
+                                opacity: 1;
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                                color: #ffffff;
+                                margin: auto;
+
+                                i {
+                                    margin-left: 1rem;
+                                }
+                            }
+
+                            &:hover {
+                                span {
+                                    opacity: 1;
+                                    font-weight: bold;
+                                    transition: 100ms;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .project-description {
+                display: flex;
+                flex-direction: column;
+                align-items: first baseline;
+                width: 35%;
+                margin-left: 2rem;
+
+                span.project {
+                    font-size: 1.1rem;
+                    margin: 0;
+                    margin-bottom: .5rem;
+
+                    a {
+                        color: #000000;
+                    }
+                }
+
+                span.type-of-project {
+                    font-weight: 300;
+                    margin-bottom: .5rem;
+                    opacity: .8;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+
+                span:last-of-type {
+                    margin-top: .5rem;
+                    a {
+                        color: black;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+
+                        i {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+
+            @include medBreakpoint {
+                flex-direction: column;
+                align-items: center;
+
+                &:first-of-type {
+                    margin-top: 3rem;
+                }
+
+                .project-description {
+                    width: 80%;
+                    margin-left: .5rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        @include medBreakpoint {
+            width: 90%;
+        }
+    }
+}

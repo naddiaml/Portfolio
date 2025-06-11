@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link · Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Link · Fon Awesome -->
+    <script src="https://kit.fontawesome.com/8e95fe90e4.js" crossorigin="anonymous"></script>
+    <!-- Link · Sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link · Estilos propios -->
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <!-- SEO -->
+    <meta name="description"
+        content="Bienvenidos a mi portfolio! Soy Nadia Mlinarevic, Desarrolladora Front-end y Diseñadora UX. Aquí vas a encontrar una muestra de mis proyectos y trabajos.">
+    <meta name="keywords"
+        content="Desarrolladora Frontend, Frontend Developer, Diseñadora UX, UX Designer, portfolio, proyectos, diseño de experiencia de usuario, desarrollo web, UX, HTML, CSS, JavaScript, React Js">
+    <meta name="author" content="Nadia Mlinarevic">
+    <meta property="og:title" content="Nadia Mlinarevic | Diseñadora UX/UI y Desarrolladora Frontend | Portfolio">
+    <meta property="og:description"
+        content="Bienvenidos a mi portfolio! Soy Nadia Mlinarevic, Desarrolladora Front-end y Diseñadora UX. Aquí vas a encontrar una muestra de mis proyectos y trabajos.">
+    <meta property="og:creator" content="Nadia Mlinarevic">
+    <link rel="canonical" href="http://naddiaml.com">
+    <link rel="shortcut icon" href="assets/Portfolio_Icon.ico" type="image/x-icon">
+    <title>Nadia Mlinarevic | Diseñadora UX/UI</title>
+</head>
+
+<body>
+    <div class="header__container">
+        <header class="header">
+            <div class="hamburger-container">
+                <input id="burger" type="checkbox">
+                <label for="burger" class="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </label>
+            </div>
+            <div class="header__items-container">
+                <div>
+                    <img src="assets/Portfolio_Icon.ico" alt="Logo de la página">
+                    <span class="m">Nadia Mlinarevic</span>
+                </div>
+                <div>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html#hero" class="current">Inicio</a></li>
+                            <li><a href="index.html#info">Sobre mí</a></li>
+                            <li><a href="index.html#portfolio">Portfolio</a></li>
+                            <li><a href="index.html#contact">Contáctame</a></li>
+                        </ul>
+                    </nav>
+                    <button class="nav__downloadCV">
+                        <a href="https://drive.google.com/file/d/1XU1Ma3ymboB0D3D_IFqI3TTYFVkkCOW2/view?usp=sharing"
+                            target="_blank">Descargar CV<i class="fa-solid fa-arrow-down"></i></a>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <img class="deco l" src="assets/deco1.svg" alt="">
+    <img class="deco r" src="assets/deco.svg" alt="">
+    <section class="hero">
+        <div class="hero__items-container">
+            <div class="hero__left-container">
+                <div class="hero__text-container">
+                    <span>Hola!</span>
+                    <span>Mi nombre es</span>
+                    <span><b>Nadia Mlinarevic</b></span>
+                    <span class="m">Diseñadora UX/UI</span>
+                </div>
+                <div class="hero__info-container">
+                    <span><i class="fa-solid fa-paper-plane"></i>naddiaml@contact.com</span>
+                    <span><i class="fa-solid fa-location-dot"></i>Buenos Aires, Argentina</span>
+                </div>
+                <div class="hero__CTA-container">
+                    <button>
+                        <a href="#">Ver mi trabajo</a>
+                    </button>
+                    <button>
+                        <a href="https://www.linkedin.com/in/nadia-mlinarevic/" target="_blank">Linkedin</a>
+                    </button>
+                </div>
+            </div>
+            <div class="hero__right-container">
+                <!-- Illustration from manypixels.co - "Interface" (81)-->
+                <img src="assets/Hero_img.png" alt="Ilustración en la sección principal">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about__items-container">
+            <!-- Illustration from manypixels.co - "Thinking" (39)-->
+            <img src="assets/About_img.png" alt="Ilustración en la sección 'Sobre mí'">
+            <div class="about__text-container">
+                <span class="title">SOBRE MÍ</span>
+                <p>Soy <b>Diseñadora UX/UI</b> con formación en <b>Desarrollo Frontend</b>. Me apasiona crear
+                    experiencias digitales
+                    que no solo funcionen bien, sino que también se sientan bien para quienes las usan.
+                </p>
+                <p>Aporto una mirada estratégica y empática al diseño, enfocándome en construir productos accesibles,
+                    funcionales y pensados para las personas. Trabajé con tecnologías como <b>HTML</b>, <b>CSS</b>,
+                    <b>SASS</b>, <b>JavaScript</b>,
+                    <b>React</b> y <b>Angular</b>, lo que me permite diseñar interfaces viables, coherentes y
+                    técnicamente
+                    realizables.
+                </p>
+                <p>Soy estudiante de la carrera de <b>Ingeniería en Sistemas</b>; una persona muy comprometida,
+                    organizada y
+                    responsable, especialmente interesada en proyectos con enfoque social.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <img src="assets/deco.svg" class="deco r" alt="">
+    <section class="portfolio">
+        <div class="portfolio__text-container">
+            <span class="title">PORTFOLIO</span>
+            <p>Cada proyecto busca resolver una necesidad concreta con claridad y criterio. Mis diseños están pensados
+                para
+                <b>aportar ese valor real</b> a quien los usa.
+            </p>
+        </div>
+        <div class="portfolio__items-container">
+
+            <!-- Beauté -->
+            <div class="project">
+                <a href="https://www.behance.net/gallery/214821953/Beaut-Luxury-Beauty-Salon-Landing-Page"
+                    target="_blank" title="Beauté - Ver proyecto en Behance">
+                    <div class="project__image">
+                        <div class="project__image-layer"><span>Ver proyecto<i
+                                    class="fa-solid fa-arrow-right"></i></span></div>
+                        <img src="assets/Portada_Beaute.png" alt="Portada del proyecto: Beauté">
+                    </div>
+                </a>
+                <div class="project-description">
+                    <span class="project title"><a
+                            href="https://www.behance.net/gallery/214821953/Beaut-Luxury-Beauty-Salon-Landing-Page"
+                            target="_blank">Beauté</a></span>
+                    <span class="type-of-project">Rediseño de sitio web</span>
+                    <p>Rediseño UX/UI para un salón de belleza de lujo. Se creó una experiencia fluida, intuitiva y
+                        visualmente atractiva, con navegación optimizada y una estética moderna alineada con la
+                        exclusividad del servicio.
+                    </p>
+                    <span><a href="https://www.behance.net/gallery/214821953/Beaut-Luxury-Beauty-Salon-Landing-Page"
+                            target="_blank">Ver proyecto<i class="fa-solid fa-arrow-right"></i></a></span>
+                </div>
+            </div>
+
+            <!-- Gitana -->
+            <div class="project">
+                <a href="https://www.behance.net/gallery/227497361/Gitana-Pizzeria-Rediseno-de-Identidad-Visual"
+                    target="_blank" title="Gitana - Ver proyecto en Behance">
+                    <div class="project__image">
+                        <div class="project__image-layer"><span>Ver proyecto<i
+                                    class="fa-solid fa-arrow-right"></i></span></div>
+                        <img src="assets/Portada_Gitana.png" alt="Portada del proyecto: Gitana Pizzería">
+                    </div>
+                </a>
+                <div class="project-description">
+                    <span class="project title"><a
+                            href="https://www.behance.net/gallery/227497361/Gitana-Pizzeria-Rediseno-de-Identidad-Visual"
+                            target="_blank">Pizzería Gitana</a></span>
+                    <span class="type-of-project">Rediseño de Identidad Visual</span>
+                    <p>Actualización de identidad visual: logotipo, paleta, tipografías y piezas clave como menú y
+                        promociones. Se buscó coherencia y atractivo visual para reforzar la comunicación con el público
+                        objetivo.
+                    </p>
+                    <span><a href="https://www.behance.net/gallery/227497361/Gitana-Pizzeria-Rediseno-de-Identidad-Visual"
+                            target="_blank">Ver proyecto<i class="fa-solid fa-arrow-right"></i></a></span>
+                </div>
+            </div>
+
+            <!-- MiDonApp -  App -->
+            <div class="project">
+                <a href="https://www.behance.net/gallery/160749875/MiDonApp" target="_blank"
+                    title="MiDonApp - Ver proyecto en Behance">
+                    <div class="project__image">
+                        <div class="project__image-layer"><span>Ver proyecto<i
+                                    class="fa-solid fa-arrow-right"></i></span></div>
+                        <img src="assets/Portada_MiDonApp.png" alt="Portada del proyecto: Caso de estudio, MiDonApp">
+                    </div>
+                </a>
+                <div class="project-description">
+                    <span class="project title"><a href="https://www.behance.net/gallery/160749875/MiDonApp"
+                            target="_blank">MiDonApp</a></span>
+                    <span class="type-of-project">Caso de estudio UX/UI</span>
+                    <p>Diseño integral de app móvil para donaciones comunitarias. Incluyó investigación con usuarios,
+                        definición de flujos, arquitectura de información y prototipos enfocados en usabilidad y
+                        cercanía.
+                    </p>
+                    <span><a href="https://www.behance.net/gallery/160749875/MiDonApp" target="_blank">Ver proyecto<i
+                                class="fa-solid fa-arrow-right"></i></a></span>
+                </div>
+            </div>
+
+            <!-- MiDonApp -  Versión web-->
+            <div class="project">
+                <a href="https://www.behance.net/gallery/227575403/MiDonApp-Version-web" target="_blank"
+                    title="MiDonApp - Ver proyecto en Behance">
+                    <div class="project__image">
+                        <div class="project__image-layer"><span>Ver proyecto<i
+                                    class="fa-solid fa-arrow-right"></i></span></div>
+                        <img src="assets/Portada_MiDonAppSW.png" alt="Portada del proyecto: MiDonApp, sitio web">
+                    </div>
+                </a>
+                <div class="project-description">
+                    <span class="project title"><a href="https://www.behance.net/gallery/227575403/MiDonApp-Version-web"
+                            target="_blank">MiDonApp · Versión web</a></span>
+                    <span class="type-of-project">Sitio web</span>
+                    <p>Versión web adaptada desde el caso de estudio anterior, con foco en la comunicación
+                        institucional. Se priorizó el acceso simple, contacto directo y tono social, con estructura
+                        clara y llamados a la acción visibles.
+                    </p>
+                    <span><a href="https://www.behance.net/gallery/227575403/MiDonApp-Version-web" target="_blank">Ver
+                            proyecto<i class="fa-solid fa-arrow-right"></i></a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="section__text-container">
+            <span class="title">CONTÁCTAME</span>
+        </div>
+        <div class="form__container">
+            <form id="formContacto" method="post">
+                <div class="fieldset__container">
+                    <fieldset>
+                        <div class="field">
+                            <label for="nombre">Nombre<span class="required">*</span></label>
+                            <div class="input">
+                                <i class="fa-solid fa-user-large"></i>
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email<span class="required">*</span></label>
+                            <div class="input">
+                                <i class="fa-solid fa-at"></i>
+                                <input type="text" name="email" id="email" placeholder="nombre@dominio.com">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="asunto">Asunto<span class="required">*</span></label>
+                            <div class="input">
+                                <i class="fa-regular fa-comment"></i>
+                                <input type="text" name="asunto" id="asunto" placeholder="Asunto">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="mensaje">Mensaje<span class="required">*</span></label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"
+                            placeholder="Dejame tu mensaje acá."></textarea>
+                    </fieldset>
+                </div>
+                <input type="hidden" name="_next" value="">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nuevo contacto - Portfolio">
+                <div class="cta__container">
+                    <button type="submit" class="sb_contact-form"><i class="fa-solid fa-paper-plane"></i>ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer__items-container">
+            <span><b>Copyright © 2025</b></span>
+            <div class="footer__icons-container">
+                <span><a href="https://www.behance.net/nadiamlinarevic" target="_blank"><i
+                            class="fa-brands fa-behance"></i></a></span>
+                <span><a href="https://www.linkedin.com/in/nadia-mlinarevic/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menú hamburguesa
+        const burgerInput = document.getElementById('burger');
+        const navLinks = document.querySelectorAll('.header__items-container div nav ul li a');
+        const nav = document.querySelector('nav');
+
+        burgerInput.addEventListener('click', () => {
+            burgerInput.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        function uncheckBurger() {
+            burgerInput.checked = false;
+            nav.classList.remove('active');
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', uncheckBurger);
+        });
+
+        // Formulario de contacto
+        document.addEventListener('DOMContentLoaded', function () {
+            function submitForm() {
+                const nombre = document.getElementById("nombre").value;
+                const email = document.getElementById("email").value;
+                const asunto = document.getElementById("asunto").value;
+                const mensaje = document.getElementById("mensaje").value;
+                const submitButton = document.querySelector(".sb_contact-form");
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                const isValid =
+                    nombre !== '' &&
+                    emailPattern.test(email) &&
+                    mensaje.trim() !== '';
+
+                if (!isValid) {
+                    Swal.fire({
+                        title: '¡Error!',
+                        text: 'Por favor, completa los campos requeridos y asegúrate de que la información ingresada sea válida',
+                        allowOutsideClick: false,
+                        confirmButtonText: 'Reintentar',
+                        customClass: {
+                            confirmButton: 'swal-button'
+                        },
+                    })
+                    buttonsStyling: false
+                    return;
+                } else {
+                    const form = document.getElementById('formContacto');
+                    const formData = new FormData(form);
+
+                    Swal.fire({
+                        html: 'Enviando formulario...',
+                        allowOutsideClick: true,
+                        showConfirmButton: false,
+                        onBeforeOpen: () => {
+                            Swal.showLoading();
+                        }
+                    });
+
+                    fetch('https://formsubmit.co/02b0172da97107a82819e995ea77cfa4', {
+                        method: 'POST',
+                        body: formData
+                    })
+                        .then(response => response.text())
+                        .then(data => {
+                            Swal.close();
+
+                            Swal.fire({
+                                title: 'Listo! 🎉',
+                                html: 'El mensaje fue enviado con éxito. Me pondré en contacto lo más rápido posible',
+                                allowOutsideClick: false,
+                                confirmButtonText: 'Cerrar',
+                                customClass: {
+                                    confirmButton: 'swal-button'
+                                },
+                            })
+                            buttonsStyling: false
+                        })
+                        .catch(error => {
+                            Swal.close();
+
+                            Swal.fire({
+                                icon: 'error',
+                                html: 'Hubo un error al enviar el formulario.' + '<br>Por favor, recarga la página e intentalo de nuevo. <br>Si esto no funciona, puedes comunicarte conmigo enviando un email a la siguiente dirección: ' + '<b>contact@naddiaml.com</b>.',
+                                allowOutsideClick: false
+                            })
+                        });
+                }
+            }
+
+            const form = document.getElementById('formContacto');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                submitForm();
+            })
+        });
+    </script>
+
+</body>
+
+</html>

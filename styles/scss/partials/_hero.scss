@@ -1,0 +1,93 @@
+.hero__items-container {
+    margin: auto;
+    margin-top: 15rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .hero__left-container {
+        .hero__text-container {
+            display: flex;
+            flex-direction: column;
+            font-size: 2rem;
+
+            span:last-of-type {
+                font-size: 1.9rem;
+            }
+        }
+
+        .hero__info-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+
+            span {
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+
+                i {
+                    margin-right: 1.5rem;
+                }
+
+                &:first-of-type {
+                    i {
+                        margin-right: 1.4rem;
+                    }
+                }
+
+                &:last-of-type {
+                    i {
+                        margin-left: .2rem;
+                    }
+                }
+            }
+        }
+
+        .hero__CTA-container button {
+            padding: .5rem 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.01rem;
+
+            &:first-of-type {
+                background-color: $sgray;
+                border: none;
+                margin-right: .5rem;
+
+                a {
+                    color: $text-sgray;
+                }
+            }
+
+            &:last-of-type {
+                background-color: $primary-color;
+                border: 1px solid $sgray;
+
+                a {
+                    color: $sgray;
+                }
+            }
+        }
+
+        @include medBreakpoint {
+            margin: auto;
+
+            .hero__CTA-container {
+                margin: auto;
+            }
+        }
+    }
+
+    .hero__right-container img {
+        width: 25rem;
+
+        @include medBreakpoint {
+            display: none;
+        }
+    }
+
+    @include smBreakpoint {
+        width: 90%;
+    }
+}

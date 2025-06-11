@@ -1,0 +1,150 @@
+#contact {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+
+    .section__text-container {
+        text-align: center;
+        margin: auto;
+        width: 50%;
+
+        @include medBreakpoint {
+            width: 80%;
+        }
+    }
+
+    .form__container {
+        width: 80%;
+        margin: auto;
+
+
+        form {
+
+            .fieldset__container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                margin: 1.5rem 0 2rem;
+
+                fieldset {
+                    border: 0;
+                    width: 45%;
+
+                    &:first-of-type {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .field {
+                        margin: 1rem 0 0;
+
+                        .input {
+                            margin: .5rem 0;
+                            padding: 1rem;
+                            border: 2px solid $input-stroke;
+                            border-radius: 10px;
+                            font-size: 12px;
+                            display: flex;
+                            align-items: center;
+
+                            i {
+                                color: rgb(146, 146, 146);
+                            }
+
+                            input {
+                                width: 100%;
+                                margin: 0 1rem;
+                                outline: none;
+                                border: none;
+                                background-color: $primary-color;
+                            }
+
+                        }
+
+                    }
+
+                    label {
+                        font-size: 16px;
+                        font-weight: 700;
+                        letter-spacing: -.5px;
+                    }
+
+                    &:last-child {
+                        margin-top: 1rem;
+                    }
+
+                    #mensaje {
+                        width: 100%;
+                        height: 88%;
+                        padding: 2rem;
+                        border-radius: 10px;
+                        font-size: 14px;
+                        outline: none;
+                        border: none;
+                        border: 2px solid $input-stroke;
+                        background-color: $primary-color;
+                        margin: .5rem 0 0;
+                        resize: none;
+
+                        &::placeholder {
+                            position: absolute;
+                        }
+                    }
+
+                    @include medBreakpoint {
+                        width: 100%;
+                        .field {
+                            margin: 1rem 0 0;
+
+                            .input {
+                                width: 100%;
+                            }
+                        }
+
+                        #mensaje {
+                            height: 20vh;
+                        }
+                    }
+
+                }
+
+                @include medBreakpoint {
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+
+            .cta__container {
+                width: fit-content;
+                margin: auto;
+
+                button.sb_contact-form {
+                    font-size: .9rem;
+                    padding: .5rem 1rem;
+                    border: none;
+                    outline: none;
+                    border-radius: 10px;
+                    background: $gray;
+                    color: $sgray;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    i {
+                        margin-right: 1rem;
+                    }
+
+                    &:hover {
+                        transition: .2s;
+                    }
+                }
+            }
+        }
+    }
+
+    @include medBreakpoint {
+        margin-top: 5rem;
+    }
+}

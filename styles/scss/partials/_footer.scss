@@ -1,0 +1,33 @@
+footer {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+    background-color: $gray;
+    color: $sgray;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    .footer__items-container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .footer__icons-container {
+            span {
+                font-size: 1.3rem;
+
+                &:first-of-type {
+                    margin-right: 1.5rem;
+                }
+
+                a {
+                    color: $sgray;
+                }
+            }
+        }
+    }
+}
