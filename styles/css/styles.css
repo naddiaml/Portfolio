@@ -70,12 +70,6 @@ p {
 }
 @media screen and (max-width: 950px) {
   .deco:nth-of-type(2) {
-    top: 8vh;
-    right: 0;
-  }
-}
-@media screen and (max-width: 580px) {
-  .deco:nth-of-type(2) {
     display: none;
   }
 }
@@ -480,7 +474,7 @@ p {
     width: 60%;
   }
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 950px) {
   #portfolio .portfolio__text-container {
     width: 80%;
   }
@@ -515,10 +509,28 @@ p {
   overflow: hidden;
 }
 #portfolio .portfolio__items-container .project a .project__image img {
-  width: 25.5rem;
-  height: 11.5rem;
+  width: 30vw;
+  height: 25vh;
   border-radius: 10px;
   object-fit: cover;
+}
+@media screen and (max-width: 1150px) {
+  #portfolio .portfolio__items-container .project a .project__image img {
+    width: 36vw;
+    height: 24vh;
+  }
+}
+@media screen and (max-width: 950px) {
+  #portfolio .portfolio__items-container .project a .project__image img {
+    width: 65vw;
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 580px) {
+  #portfolio .portfolio__items-container .project a .project__image img {
+    width: 70vw;
+    height: 20vh;
+  }
 }
 @media screen and (max-width: 400px) {
   #portfolio .portfolio__items-container .project a .project__image img {
@@ -539,8 +551,8 @@ p {
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 25.5rem;
-  height: 11.7rem;
+  width: 30vw;
+  height: 25.5vh;
   background-color: #2F2F2F;
   opacity: 0.5;
   border-radius: 10px;
@@ -548,10 +560,29 @@ p {
   transition: 200ms ease-in-out;
   cursor: pointer;
 }
+@media screen and (max-width: 1150px) {
+  #portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer {
+    width: 36vw;
+    height: 24vh;
+  }
+}
+@media screen and (max-width: 950px) {
+  #portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer {
+    width: 65vw;
+    height: 30.7vh;
+  }
+}
+@media screen and (max-width: 580px) {
+  #portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer {
+    width: 70vw;
+    height: 20.1vh;
+  }
+}
 @media screen and (max-width: 400px) {
   #portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer {
     width: 80vw;
     height: 18.4vh;
+    margin: auto;
   }
 }
 #portfolio .portfolio__items-container .project a:hover .project__image .project__image-layer span {
@@ -620,12 +651,25 @@ p {
     margin-top: 1rem;
   }
 }
-@media screen and (max-width: 950px) and (max-width: 400px) {
+@media screen and (max-width: 950px) and (max-width: 580px) {
   #portfolio .portfolio__items-container .project .project-description {
     margin-left: 0;
   }
 }
+@media screen and (max-width: 1150px) {
+  #portfolio .portfolio__items-container {
+    width: 90%;
+  }
+  #portfolio .portfolio__items-container .project .project-description {
+    width: 45%;
+  }
+}
 @media screen and (max-width: 950px) {
+  #portfolio .portfolio__items-container .project .project-description {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 580px) {
   #portfolio .portfolio__items-container {
     width: 90%;
   }

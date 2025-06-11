@@ -71,11 +71,6 @@ p {
         right: -5rem;
 
         @include medBreakpoint {
-            top: 8vh;
-            right: 0;
-        }
-
-        @include smBreakpoint {
             display: none;
         }
     }

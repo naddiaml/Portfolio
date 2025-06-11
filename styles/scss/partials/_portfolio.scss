@@ -15,7 +15,7 @@
             width: 60%;
         }
 
-        @include smBreakpoint {
+        @include medBreakpoint {
             width: 80%;
 
             p {
@@ -52,17 +52,31 @@
                     overflow: hidden;
 
                     img {
-                        width: 25.5rem;
-                        height: 11.5rem;
+                        width: 30vw;
+                        height: 25vh;
                         border-radius: 10px;
                         object-fit: cover;
+
+                        @include largeBreakpoint {
+                            width: 36vw;
+                            height: 24vh;
+                        }
+
+                        @include medBreakpoint {
+                            width: 65vw;
+                            height: 30vh;
+                        }
+
+                        @include smBreakpoint {
+                            width: 70vw;
+                            height: 20vh;
+                        }
 
                         @include uxsBreakpoint {
                             width: 80vw;
                             height: 18vh;
-                            margin: auto;
+                            margin: auto
                         }
-
                     }
 
                     .project__image-layer {
@@ -83,8 +97,8 @@
                             align-items: center;
                             justify-content: center;
                             position: absolute;
-                            width: 25.5rem;
-                            height: 11.7rem;
+                            width: 30vw;
+                            height: 25.5vh;
                             background-color: $sgray;
                             opacity: 0.5;
                             border-radius: 10px;
@@ -92,11 +106,27 @@
                             transition: 200ms ease-in-out;
                             cursor: pointer;
 
+                            @include largeBreakpoint {
+                                width: 36vw;
+                                height: 24vh;
+                            }
+
+                            @include medBreakpoint {
+                                width: 65vw;
+                                height: 30.7vh;
+                            }
+
+                            @include smBreakpoint {
+                                width: 70vw;
+                                height: 20.1vh;
+                            }
+
                             @include uxsBreakpoint {
                                 width: 80vw;
                                 height: 18.4vh;
+                                margin: auto
                             }
-                            
+
                             span {
                                 display: flex;
                                 align-items: center;
@@ -178,15 +208,33 @@
                     width: 80%;
                     margin-left: .5rem;
                     margin-top: 1rem;
-                    
-                    @include uxsBreakpoint {
+
+                    @include smBreakpoint {
                         margin-left: 0;
                     }
                 }
             }
         }
 
+        @include largeBreakpoint {
+            width: 90%;
+
+            .project {
+                .project-description {
+                    width: 45%;
+                }
+            }
+        }
+
         @include medBreakpoint {
+            .project {
+                .project-description {
+                    width: 70%;
+                }
+            }
+        }
+
+        @include smBreakpoint {
             width: 90%;
         }
     }
