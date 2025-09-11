@@ -46,7 +46,7 @@
                             align-items: center;
 
                             i {
-                                color: rgb(146, 146, 146);
+                                color: $input-icons;
                                 padding-right: .1rem;
                             }
 
@@ -56,8 +56,11 @@
                                 outline: none;
                                 border: none;
                                 background-color: $primary-color;
-                            }
 
+                                &::placeholder {
+                                    color: $input-placeholders;
+                                }
+                            }
                         }
 
                     }
@@ -86,12 +89,14 @@
                         resize: none;
 
                         &::placeholder {
+                            color: $input-placeholders;
                             position: absolute;
                         }
                     }
 
                     @include medBreakpoint {
                         width: 100%;
+
                         .field {
                             margin: 1rem 0 0;
 
@@ -125,7 +130,7 @@
                     outline: none;
                     border-radius: 10px;
                     background: $gray;
-                    color: $sgray;
+                    color: $content;
                     font-weight: 500;
                     display: flex;
                     align-items: center;

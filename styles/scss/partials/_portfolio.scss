@@ -1,11 +1,30 @@
 #portfolio {
-    margin: 5rem auto;
+    margin: 8rem auto;
 
     .portfolio__text-container {
-        width: 38%;
+        width: 48%;
         margin: auto;
         text-align: center;
         margin-bottom: 1rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+
+            .divider {
+                height: 24px;
+                width: 1.5px;
+                background-color: $content;
+                margin: 2rem auto;
+            }
+
+            img {
+                width: 1rem;
+                margin: 2rem auto;
+            }
+        }
 
         p {
             margin-top: .5rem;
@@ -25,70 +44,50 @@
     }
 
     .portfolio__items-container {
-        width: 80%;
-        margin: auto;
+        width: 70%;
+        margin: 2rem auto 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
+        @include largeBreakpoint {
+            width: 80%;
+        }
+
         .project {
             display: flex;
             align-items: flex-start;
-            margin: 5rem auto 0;
-            justify-content: center;
+            margin: 8rem auto 0;
+            justify-content: space-evenly;
 
             &:first-of-type {
                 margin-top: 2.5rem;
             }
 
             a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
                 .project__image {
+                    width: 26rem;
+                    height: 14rem;
                     border-radius: 10px;
-                    width: fit-content;
                     overflow: hidden;
 
                     img {
-                        width: 30vw;
-                        height: 25vh;
-                        border-radius: 10px;
                         object-fit: cover;
-
-                        @include largeBreakpoint {
-                            width: 36vw;
-                            height: 24vh;
-                        }
-
-                        @include medBreakpoint {
-                            width: 65vw;
-                            height: 30vh;
-                        }
-
-                        @include smBreakpoint {
-                            width: 70vw;
-                            height: 20vh;
-                        }
-
-                        @include uxsBreakpoint {
-                            width: 80vw;
-                            height: 18vh;
-                            margin: auto
-                        }
+                        height: 100%;
+                        object-position: 50% 50%;
+                        border-radius: 10px;
                     }
 
                     .project__image-layer {
                         display: none;
                     }
-
                 }
 
                 &:hover {
                     .project__image {
+
                         img {
-                            filter: blur(10px);
+                            filter: blur(1px);
                             transition: 200ms ease-in-out;
                         }
 
@@ -97,35 +96,14 @@
                             align-items: center;
                             justify-content: center;
                             position: absolute;
-                            width: 30vw;
-                            height: 25.5vh;
-                            background-color: $sgray;
-                            opacity: 0.5;
+                            width: 25.7rem;
+                            height: 14rem;
+                            background-color: #001739;
+                            opacity: 0.65;
                             border-radius: 10px;
                             z-index: 1;
-                            transition: 200ms ease-in-out;
+                            transition: 20ms ease-in-out;
                             cursor: pointer;
-
-                            @include largeBreakpoint {
-                                width: 36vw;
-                                height: 24vh;
-                            }
-
-                            @include medBreakpoint {
-                                width: 65vw;
-                                height: 30.7vh;
-                            }
-
-                            @include smBreakpoint {
-                                width: 70vw;
-                                height: 20.1vh;
-                            }
-
-                            @include uxsBreakpoint {
-                                width: 80vw;
-                                height: 18.4vh;
-                                margin: auto
-                            }
 
                             span {
                                 display: flex;
@@ -133,11 +111,12 @@
                                 opacity: 1;
                                 font-size: 1.1rem;
                                 font-weight: 500;
-                                color: #ffffff;
+                                color: $primary-color;
                                 margin: auto;
 
                                 i {
                                     margin-left: 1rem;
+                                    color: $primary-color;
                                 }
                             }
 
@@ -154,11 +133,10 @@
             }
 
             .project-description {
+                width: 45%;
                 display: flex;
                 flex-direction: column;
                 align-items: first baseline;
-                width: 35%;
-                margin-left: 2rem;
 
                 span.project {
                     font-size: 1.1rem;
@@ -166,7 +144,7 @@
                     margin-bottom: .5rem;
 
                     a {
-                        color: #000000;
+                        color: $content;
                     }
                 }
 
@@ -177,65 +155,87 @@
                 }
 
                 p {
-                    font-size: 1rem;
+                    font-size: .95rem;
+                    width: 90%;
                 }
 
-                span:last-of-type {
-                    margin-top: .5rem;
+                .project-tags {
+                    width: 150%;
+                    margin-top: 1rem;
 
-                    a {
-                        color: black;
-                        font-weight: bold;
-                        display: flex;
-                        align-items: center;
+                    span {
+                        font-size: .8rem;
+                        height: 2rem;
+                        padding: .5rem;
+                        border: 1px solid $content;
+                        border-radius: 5px;
+                        margin-right: .5rem;
+                    }
+                }
+            }
 
-                        i {
-                            margin-left: 1rem;
+            @include largeBreakpoint {
+                flex-direction: column;
+                display: flex;
+                align-items: baseline;
+                margin: 4rem auto 0;
+
+                a {
+                    margin: auto;
+
+                    .project__image {
+                        width: 28.8rem !important;
+                        height: 15.6rem !important;
+
+                        @include medBreakpoint {
+                            width: 22.2rem !important;
+                            height: 12.4rem !important;
+                            margin: auto;
+
+                            &:hover {
+                                .project__image-layer {
+                                    width: 22.2rem;
+                                    height: 12.4rem;
+                                }
+                            }
+                        }
+
+                        @include uxsBreakpoint {
+                            width: 16rem !important;
+                            height: 8.7rem !important;
+                            margin: auto;
+
+                            &:hover {
+                                .project__image-layer {
+                                    width: 16rem;
+                                    height: 8.7rem;
+                                }
+                            }
                         }
                     }
                 }
-            }
-
-            @include medBreakpoint {
-                flex-direction: column;
-                align-items: center;
-
-                &:first-of-type {
-                    margin-top: 3rem;
-                }
 
                 .project-description {
-                    width: 80%;
-                    margin-left: .5rem;
-                    margin-top: 1rem;
+                    width: 60%;
+                    margin: 2rem auto;
+
+                    .project-tags {
+                        display: none;
+                    }
+
+                    @include medBreakpoint {
+                        width: 80%;
+                    }
 
                     @include smBreakpoint {
-                        margin-left: 0;
+                        width: 90%;
+                    }
+
+                    @include uxsBreakpoint {
+                        width: 100%;
                     }
                 }
             }
-        }
-
-        @include largeBreakpoint {
-            width: 90%;
-
-            .project {
-                .project-description {
-                    width: 45%;
-                }
-            }
-        }
-
-        @include medBreakpoint {
-            .project {
-                .project-description {
-                    width: 70%;
-                }
-            }
-        }
-
-        @include smBreakpoint {
-            width: 90%;
         }
     }
 }

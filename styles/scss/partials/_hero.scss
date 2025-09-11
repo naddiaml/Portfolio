@@ -49,23 +49,25 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1.01rem;
+            font-weight: 500;
+            transition: 350ms ease-in-out;
 
             &:first-of-type {
-                background-color: $sgray;
-                border: none;
+                background-color: $content;
+                border: 1px solid $content;
                 margin-right: .5rem;
 
                 a {
-                    color: $text-sgray;
+                    color: $primary-color;
                 }
             }
 
             &:last-of-type {
                 background-color: $primary-color;
-                border: 1px solid $sgray;
+                border: 1px solid $content;
 
                 a {
-                    color: $sgray;
+                    color: $content;
                 }
             }
         }

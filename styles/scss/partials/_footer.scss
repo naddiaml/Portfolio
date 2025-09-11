@@ -1,9 +1,9 @@
 footer {
-    margin-top: 2rem;
+    margin-top: 4rem;
     padding: 1rem 0;
     width: 100%;
     background-color: $gray;
-    color: $sgray;
+    color: $gray;
     font-size: 1rem;
     text-align: center;
     display: flex;
@@ -25,7 +25,7 @@ footer {
                 }
 
                 a {
-                    color: $sgray;
+                    color: $gray;
                 }
             }
         }
