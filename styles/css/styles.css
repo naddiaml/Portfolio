@@ -40,6 +40,40 @@ p {
   font-size: 1.2rem;
 }
 
+.deco {
+  width: 20rem;
+  z-index: -10;
+  position: absolute;
+}
+
+.deco_port {
+  left: -10rem;
+}
+@media screen and (max-width: 950px) {
+  .deco_port {
+    top: 80rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  .deco_port {
+    top: 66rem;
+  }
+}
+
+.deco_cont {
+  width: 8rem;
+  top: 185rem;
+  right: 0;
+}
+
+.deco_foo {
+  position: relative;
+  width: 15rem;
+  margin-top: 1rem;
+  margin-bottom: -4.3rem;
+  margin-left: calc(50% - 7.5rem);
+}
+
 .swal-button {
   background-color: #C5DDED;
   color: #DEE5EA;
